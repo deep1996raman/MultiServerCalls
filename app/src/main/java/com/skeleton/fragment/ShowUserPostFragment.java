@@ -14,6 +14,7 @@ import com.skeleton.model.UserPosts;
 import com.skeleton.retrofit.APIError;
 import com.skeleton.retrofit.ResponseResolver;
 import com.skeleton.retrofit.RestClient;
+import com.skeleton.util.Log;
 
 import java.util.List;
 
@@ -32,7 +33,9 @@ public class ShowUserPostFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_user_posts, container, false);
         init(view);
         int id;
-        id = getArguments().getInt("postId");
+        id = getArguments().getInt("postid");
+
+        Log.d("abc1", String.valueOf(id));
         RestClient.getApiInterface().getUserPosts(1 + id).enqueue(new ResponseResolver<List<UserPosts>>(getContext(), true) {
             @Override
             public void success(final List<UserPosts> userPostses) {

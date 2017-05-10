@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.skeleton.R;
 import com.skeleton.activity.DisplayActivity;
 import com.skeleton.model.UserInfo;
+import com.skeleton.util.Log;
 
 
 /**
@@ -45,6 +46,8 @@ public class BelowFragment extends BaseFragment {
                 int id;
                 id = obj.getId();
                 bundle1.putInt("postid", id);
+
+                Log.d("abc", String.valueOf(id));
                 ShowUserPostFragment showUserPostFragment = new ShowUserPostFragment();
                 showUserPostFragment.setArguments(bundle1);
                 FragmentManager fragmentManager = ((DisplayActivity) getContext()).getSupportFragmentManager();
