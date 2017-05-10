@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/font_small"
+    android:background="@drawable/shape"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_tiny">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/defaultTextView"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:gravity="start"
+            android:text="Post ID" />
+
+        <TextView
+            android:id="@+id/tvPostId"
+            style="@style/defaultTextView"
+            android:layout_width="0dp"
+            android:layout_weight="0.75" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/defaultTextView"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:gravity="start"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/defaultTextView"
+            android:layout_width="0dp"
+            android:layout_weight="0.75" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            style="@style/defaultTextView"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:gravity="start"
+            android:text="Post" />
+
+        <TextView
+            android:id="@+id/tvPost"
+            style="@style/defaultTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:background="@drawable/shape"
+            android:maxLines="10" />
+
+    </LinearLayout>
+
+</LinearLayout>
