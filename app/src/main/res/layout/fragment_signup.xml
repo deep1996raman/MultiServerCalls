@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/user_placeholder"
+            />
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/et_name"
+            style="@style/edit_text_design"
+            android:hint="Name"
+            />
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/et_phno"
+            style="@style/edit_text_design"
+            android:hint="Phone Number"
+            />
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/et_email"
+            style="@style/edit_text_design"
+            android:hint="Email"
+            />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rg_gender"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Gender:"
+                android:textStyle="bold"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/rb_male"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/rb_female"/>
+
+        </RadioGroup>
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/et_dob"
+            style="@style/edit_text_design"
+            android:hint="Date Of Birth"
+            />
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/et_pass"
+            style="@style/edit_text_design"
+            android:hint="Password"
+            />
+        <com.skeleton.util.customview.MaterialEditText
+            android:id="@+id/et_conpass"
+            style="@style/edit_text_design"
+            android:hint="Confirm Password"
+            />
+
+        <CheckBox
+            android:id="@+id/cb_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I accept Terms of Service and Privacy Policy"
+            android:textSize="@dimen/font_small"/>
+
+        <Button
+            android:id="@+id/xxx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:background="#00c34e"
+            android:text="Sign Up"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
