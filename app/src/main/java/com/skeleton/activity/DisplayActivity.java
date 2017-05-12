@@ -1,9 +1,12 @@
 package com.skeleton.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.skeleton.R;
@@ -21,12 +24,14 @@ import java.util.List;
 
 public class DisplayActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
+    private Button buttonSignup;
 
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
+        init();
         RestClient.getApiInterface().getUserData().enqueue(new ResponseResolver<List<UserInfo>>(this, true) {
             @Override
             public void success(final List<UserInfo> userInfos) {
@@ -45,6 +50,26 @@ public class DisplayActivity extends AppCompatActivity {
 
             }
         });
+        buttonSignup.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param v view
+             */
+            @Override
+            public void onClick(final View v) {
+                Intent intent = new Intent(DisplayActivity.this, SignUpActivity.class);
+                startActivity(intent);
+
+            }
+        });
+    }
+
+    /**
+     * init
+     */
+
+    private void init() {
+        buttonSignup = (Button) findViewById(R.id.btn_signup);
     }
 
 }

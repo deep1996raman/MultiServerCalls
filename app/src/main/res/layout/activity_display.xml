@@ -34,6 +34,12 @@
         android:layout_weight="0.5"
         android:id="@+id/lldisplay2"
         android:orientation="vertical"></LinearLayout>
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/btn_signup"
+           style="@style/primary_button"
+           android:text="Sign Up"/>
 
 
    </LinearLayout>

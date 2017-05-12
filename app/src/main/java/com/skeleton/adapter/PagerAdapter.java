@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class PagerAdapter extends FragmentStatePagerAdapter {
     private List<Fragment> fragments;
+    private String[] fragment = new String[]{"SignUp", "SignIn"};
 
     /**
      * Instantiates a new Pager adapter.
@@ -29,6 +30,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(final int position) {
         return this.fragments.get(position);
     }
+    @Override
+    public CharSequence getPageTitle(final int position) {
+        return fragment[position];
+    }
 
     @Override
     public int getCount() {
@@ -38,4 +43,6 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             return fragments.size();
         }
     }
+
+
 }
